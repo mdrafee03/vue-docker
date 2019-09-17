@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+ frontend:
+    container_name: frontend
+    restart: always
+    build: ./frontend
+    volumes:
+      - ./frontend:/app
+      - ./frontend/node_modules
+    environment:
+      - NODE_ENV=development
+      - SERVICE_NAME=frontend
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "8081:8080"
