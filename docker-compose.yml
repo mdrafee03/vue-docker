@@ -6,7 +6,6 @@ services:
     build: ./frontend
     volumes:
       - ./frontend/src:/app/src
-      - /frontend/node_modules
     environment:
       - NODE_ENV=development
       - SERVICE_NAME=frontend
